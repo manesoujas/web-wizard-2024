@@ -32,7 +32,7 @@ In the existing implementation, the feedback form asks for a department and feed
 - CSS
 - JavaScript and jQuery
 - PHP with MySQLi
-- MySQL
+- MySQL (used locally through XAMPP)
 - Bootstrap (the pages reference Bootstrap 4.5.2 and 5.3.0-alpha1)
 
 Some styles and scripts are loaded from external CDNs and the college website, so those parts of the pages require an internet connection.
@@ -63,22 +63,17 @@ The project also includes image and video assets in the repository root.
 
 ### Requirements
 
-- PHP with the MySQLi extension
-- A MySQL server
+- [XAMPP](https://www.apachefriends.org/) with Apache, PHP, and MySQL/MariaDB
 - A browser
 
-### Run the website
+### Run locally with XAMPP
 
-1. Place or clone the project into a local folder.
-2. From that folder, start PHP's built-in development server:
+1. Install and open the XAMPP Control Panel.
+2. Place or clone this project into XAMPP's `htdocs` directory. For a default Windows installation, the folder can be `C:\xampp\htdocs\web-wizard-2024`.
+3. In the XAMPP Control Panel, start **Apache**. Start **MySQL** as well if you want to use the PHP-backed forms.
+4. Open [http://localhost/web-wizard-2024/index.html](http://localhost/web-wizard-2024/index.html) in your browser.
 
-   ```sh
-   php -S 127.0.0.1:8000
-   ```
-
-3. Open [http://127.0.0.1:8000/index.html](http://127.0.0.1:8000/index.html).
-
-The PHP form and login handlers require MySQL databases and tables. No database schema or SQL dump is included, so obtain the original schema/data setup before expecting those flows to work. The existing PHP files also contain local database connection settings; do not put production credentials in this public repository. The HTML pages can be viewed without MySQL, but that does not make the PHP-backed forms functional.
+The PHP login and form handlers require MySQL databases and tables. No database schema or SQL dump is included, so obtain or recreate the original database setup before expecting those flows to work. The existing PHP files contain local database connection settings; do not use these settings for a public deployment or commit production credentials. The HTML pages can be viewed with Apache even when MySQL is stopped, but the PHP-backed forms will not work without the required database setup.
 
 ## 🎯 Purpose
 
@@ -98,8 +93,3 @@ The project explored how a college website could provide a channel for students 
 
 This was a collaborative First-Year B.Sc. IT project.
 
-## 📸 Screenshots
-
-Screenshots can be added here later.
-
-<!-- Add screenshots with Markdown image links when available. -->
