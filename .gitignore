@@ -1,0 +1,19 @@
+# Local environment settings and secrets
+.env
+.env.*
+!.env.example
+
+# Generated dependencies
+/node_modules/
+/vendor/
+
+# Editor and IDE settings
+.vscode/
+.idea/
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Local logs
+*.log

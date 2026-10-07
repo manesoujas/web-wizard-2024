@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Feedback</title>
+    <link rel="icon" href="https://www.trcac.org.in/images/thakurlogo.png" sizes="142x142" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .feedback-container {
+            margin-top: 50px;
+        }
+        .feedback-box {
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .feedback-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .feedback-box textarea {
+            resize: none;
+            padding: 10px;
+        }
+        footer {
+            margin-top: 40px;
+            padding: 10px;
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation bar with user's profile link -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">User Dashboard</a>
+    <div class="ml-auto">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Profile
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
+                <a class="dropdown-item" href="#">Anonymous Profile</a>
+                <a class="dropdown-item" href="#">Settings can't be changed</a>
+                <div class="dropdown-divider"></div>
+
+            </div>
+        </div>
+    </div>
+</nav>
+<br><br>
+<!-- Department & Feedback Form -->
+<div class="container feedback-container">
+    <div class="feedback-box">
+        <h3>Submit Your Feedback</h3>
+
+        <form action="feedback_submit.php" method="POST">
+            <div class="form-group">
+                <label for="department">Select Department:</label>
+                <select class="form-control" id="department" name="department" required>
+                    <option value="" disabled selected>Select your department</option>
+                    <option value="B.Sc. Computer Science(C.S)">B.Sc. Computer Science(C.S)</option>
+                    <option value="B.Sc. Information and Techonology (I.T)">B.Sc. Information and Techonology (I.T) </option>
+                    <option value="Bachelor of Arts (B.A)">Bachelor of Arts (B.A)</option>
+                    <option value="Bachelor of Multimedia and Mass Communication (B.A.M.M.C)">Bachelor of Multimedia and Mass Communication (B.A.M.M.C)</option>
+                    <option value="Bachelor of Commerce(B.Com)">Bachelor of Commerce(B.Com)</option>
+                    <option value="B.Com (Accounting & Finance) (B.A.F)">B.Com (Accounting & Finance) (B.A.F)</option>
+                    <option value="Bachelor of Management Studies(B.M.S)">Bachelor of Management Studies(B.M.S)</option>
+
+
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="feedback">Your Feedback:</label>
+                <textarea class="form-control" id="feedback" name="feedback" rows="5" placeholder="Enter your feedback..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-success">Submit Feedback</button>
+        </form>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy;Copyright© 2024 TRCAC All Rights Reserved.</p>
+</footer>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

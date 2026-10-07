@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Integrated Website</title>
+    <link rel="icon" href="https://www.trcac.org.in/images/thakurlogo.png" sizes="142x142" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+     
+        .header-image {
+            background: url('/IMAGES/contat.png') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            height: 150px; /*-- 1200x400--*/
+            color: rgb(255, 255, 255);
+        }
+        
+        
+        .header-content h1 {
+            color: rgb(0, 0, 0);
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .header-content a {
+            color: rgb(0, 0, 0);
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .header-content a:hover {
+            background-color: #0056b3;
+        }
+        /* Footer styles */
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+        }
+        h1 {
+    color: #0056b3;
+}
+
+label {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #555;
+    font-weight: bold;
+}
+
+
+input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: #0056b3;
+    width: 100%;
+    font-size: 16px;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 350px;
+    margin-right: 350px;
+}
+.contact-form {
+            margin-top: 50px;
+        }
+        .contact-form h2 {
+            font-weight: bold;
+        }
+        .map-container {
+            width: 100%;
+            height: 400px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header-image d-flex align-items-center justify-content-center">
+        <div class="header-content text-center">
+            <h1>Contact Us</h1>
+            <a href="secondpage.html" class="btn">Home</a> 
+        
+            <a href="#" class="btn">  Contact Us
+            </a>
+            
+        </div>
+    </header>
+
+    <!-- Body Section -->
+    <div class="container contact-form">
+        <div class="row">
+            <!-- Left side: Contact Form -->
+            <div class="col-md-6">
+                <h2>Please let me know if you have any questions!</h2>
+                <form action="contact.php" method="post">
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label type="name"></label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Name" required>
+                        </div>
+                        <div class="col">
+                            <label type="email"></label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label type="number"></label>
+                            <input type="text" id="number" name="number" class="form-control" placeholder="Mobile_Number" required>
+                        </div>
+                        <div class="col">
+                            <label type="topic"></label>
+                            <input type="text" id="topic" name="topic" class="form-control" placeholder="Subject" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                       <label type="message"></label>
+                        <textarea id="message" name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
+                    
+                    </div>
+                    <button type="submit" 
+                    onclick="solve()">
+                      Send Message </a>
+                    </button>
+                </form>
+            </div>
+    
+            <!-- Right side: Google Map -->
+            <div class="col-md-6">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.629428179343!2d72.8652277153641!3d19.25497545132483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b0ee4c3903d9%3A0xffd04e9354b7df92!2sThakur%20Ramnarayan%20College%20of%20Law!5e0!3m2!1sen!2sin!4v1642250135623!5m2!1sen!2sin" 
+                            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Section -->
+    <footer class="footer mt-5">
+        <div class="container">
+            <p>&copy; Copyright© 2024 TRCAC All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+        </div>
+    </footer>
+    
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
